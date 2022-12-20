@@ -10,7 +10,7 @@ function calculate(AllSum, count, promo = null) {
    AllSum = AllSum - AllSum * 0.05;
   }
   if (AllSum >= 50000) {
-    AllSum = AllSum - AllSum * (1 / 5);
+    AllSum = AllSum - (AllSum - 50000) * (1 / 5);
   }
   if (promo === 'СКИДКА15' && AllSum >= 20000) {
     AllSum = AllSum - AllSum * 0.15;
